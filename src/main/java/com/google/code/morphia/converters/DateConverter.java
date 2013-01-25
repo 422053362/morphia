@@ -3,6 +3,7 @@
  */
 package com.google.code.morphia.converters;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import com.google.code.morphia.mapping.MappedField;
@@ -17,18 +18,23 @@ public class DateConverter extends TypeConverter implements SimpleValueConverter
 	
 	public DateConverter() { this(Date.class); };
 	protected DateConverter(Class clazz) { super(clazz); }
-	@SuppressWarnings("deprecation")
+
 	@Override
-	public
-	Object decode(Class targetClass, Object val, MappedField optionalExtraInfo) throws MappingException {
-		if (val == null) return null;
+	public Object encode(Object value, MappedField optionalExtraInfo) {
+		return ((Date) value).getTime();
+	}
 
-		if (val instanceof Date)
-			return val;
-
-		if (val instanceof Number)
-			return new Date(((Number)val).longValue());
-			
-		return new Date(Date.parse(val.toString())); // good luck
+	@Override
+	public Object decode(Class targetClass, Object fromDBObject, MappedField optionalExtraInfo) throws MappingException {
+		if (fromDBObject == null)
+			return null;
+		Calendar ins = Calendar.getInstance();
+	    ins.setTimeInMillis(Long.valueOf(fromDBObject.toString()));
+		return ins.getTime();
+	}
+	
+	@Override
+	protected boolean isSupported(Class<?> c, MappedField optionalExtraInfo) {
+		return Date.class.isAssignableFrom(c);
 	}
 }
