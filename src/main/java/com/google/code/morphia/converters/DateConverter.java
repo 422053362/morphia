@@ -21,7 +21,11 @@ public class DateConverter extends TypeConverter implements SimpleValueConverter
 
 	@Override
 	public Object encode(Object value, MappedField optionalExtraInfo) {
-		return ((Date) value).getTime();
+		if(value!=null){
+		   return ((Date) value).getTime();
+		}else{
+			return null;
+		}
 	}
 
 	@Override
