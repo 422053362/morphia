@@ -22,7 +22,7 @@ public class DateConverter extends TypeConverter implements SimpleValueConverter
 	@Override
 	public Object encode(Object value, MappedField optionalExtraInfo) {
 		if(value!=null){
-		   return ((Date) value).getTime();
+		   return ((Date) value).getTime()/1000*1000;
 		}else{
 			return null;
 		}
