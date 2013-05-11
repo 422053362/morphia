@@ -12,7 +12,7 @@ import com.mongodb.DBRef;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({ "rawtypes"})
 public class KeyConverter extends TypeConverter {
 
 	public KeyConverter() { super(Key.class); }

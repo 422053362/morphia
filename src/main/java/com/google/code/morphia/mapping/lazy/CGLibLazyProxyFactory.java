@@ -24,7 +24,7 @@ import com.thoughtworks.proxy.toys.dispatch.Dispatching;
  * 
  * @author uwe schaefer
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class CGLibLazyProxyFactory implements LazyProxyFactory {
 	private final CglibProxyFactory factory = new CglibProxyFactory();
 	public CGLibLazyProxyFactory() {
@@ -48,6 +48,7 @@ public class CGLibLazyProxyFactory implements LazyProxyFactory {
 		return proxy;
 
 	}
+
 
 	public <T extends Collection> T createListProxy(final T listToProxy,
 			final Class referenceObjClass, final boolean ignoreMissing,

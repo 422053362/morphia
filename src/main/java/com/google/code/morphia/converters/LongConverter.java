@@ -9,7 +9,7 @@ import com.google.code.morphia.mapping.MappingException;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked","rawtypes"})
+@SuppressWarnings({"rawtypes"})
 public class LongConverter extends TypeConverter implements SimpleValueConverter {
 	
 	public LongConverter() { super(long.class, Long.class); }

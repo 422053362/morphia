@@ -7,9 +7,11 @@ import com.thoughtworks.proxy.kit.ObjectReference;
 import com.thoughtworks.proxy.toys.delegate.DelegationMode;
 import com.thoughtworks.proxy.toys.hotswap.HotSwappingInvoker;
 
+@SuppressWarnings({"unchecked","rawtypes"})
 class NonFinalizingHotSwappingInvoker extends HotSwappingInvoker {
 	
-	public NonFinalizingHotSwappingInvoker(Class[] types, ProxyFactory proxyFactory, ObjectReference delegateReference,
+
+	public NonFinalizingHotSwappingInvoker( Class[] types, ProxyFactory proxyFactory, ObjectReference delegateReference,
 			DelegationMode delegationMode) {
 		super(types, proxyFactory, delegateReference, delegationMode);
 	}

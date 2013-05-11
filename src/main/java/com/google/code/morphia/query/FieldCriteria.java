@@ -21,7 +21,7 @@ public class FieldCriteria extends AbstractCriteria implements Criteria {
 	protected final Object value;
 	protected final boolean not;
 	
-	@SuppressWarnings("unchecked")
+
 	protected FieldCriteria(QueryImpl<?> query, String field, FilterOperator op, Object value, boolean validateNames, boolean validateTypes) {
 		this(query, field, op, value, validateNames, validateTypes, false);
 	}

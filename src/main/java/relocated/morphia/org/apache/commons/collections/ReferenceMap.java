@@ -79,6 +79,7 @@ import java.util.Set;
  *  @since 2.1
  *  @see java.lang.ref.Reference
  */
+@SuppressWarnings("rawtypes")
 public class ReferenceMap extends AbstractMap {
 
     /**

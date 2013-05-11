@@ -6,7 +6,8 @@ import com.google.code.morphia.mapping.MappedField;
 import com.google.code.morphia.mapping.MappingException;
 
 @SuppressWarnings({ "rawtypes" })
-public class BigDecimalConverter extends TypeConverter implements SimpleValueConverter {
+public class BigDecimalConverter extends TypeConverter implements
+		SimpleValueConverter {
 
 	public BigDecimalConverter() {
 		super(BigDecimal.class);
@@ -17,19 +18,24 @@ public class BigDecimalConverter extends TypeConverter implements SimpleValueCon
 	}
 
 	@Override
-	protected boolean isSupported(Class<?> c, MappedField optionalExtraInfo) {
-		return BigDecimal.class.isAssignableFrom(c);
-	}
-
-	@Override
 	public Object encode(Object value, MappedField optionalExtraInfo) {
-		return value.toString();
+		if (value != null) {
+			return value.toString();
+		}else {
+			return null;
+		}
 	}
 
-	@Override
-	public Object decode(Class targetClass, Object fromDBObject, MappedField optionalExtraInfo) throws MappingException {
+	public Object decode(Class targetClass, Object fromDBObject,
+			MappedField optionalExtraInfo) throws MappingException {
 		if (fromDBObject == null)
 			return null;
 		return new BigDecimal(fromDBObject.toString());
 	}
+
+	@Override
+	protected boolean isSupported(Class<?> c, MappedField optionalExtraInfo) {
+		return BigDecimal.class.isAssignableFrom(c);
+	}
+
 }

@@ -10,7 +10,7 @@ import com.google.code.morphia.mapping.MappingException;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked","rawtypes"})
+@SuppressWarnings({"rawtypes"})
 public class FloatConverter extends TypeConverter implements SimpleValueConverter{
 	
 	public FloatConverter() { super(Float.class, float.class); }

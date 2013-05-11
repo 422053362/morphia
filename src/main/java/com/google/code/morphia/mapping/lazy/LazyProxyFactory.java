@@ -11,10 +11,11 @@ import com.google.code.morphia.Key;
 /**
  * @author uwe schaefer
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings("rawtypes")
 public interface LazyProxyFactory {
 	<T> T createProxy(Class<T> targetClass, final Key<T> key,
 			final DatastoreProvider p);
+
 
 	<T extends Collection> T createListProxy(T listToProxy,
 			Class referenceObjClass, boolean ignoreMissing, DatastoreProvider p);

@@ -7,7 +7,7 @@ package com.google.code.morphia.mapping.lazy.proxy;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * 
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class ProxyHelper {
 
 	public static <T> T unwrap(final T entity) {

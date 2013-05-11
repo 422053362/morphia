@@ -516,7 +516,8 @@ public class ReflectionUtils
             FileNotFoundException, ClassNotFoundException
     {
         Set<Class<?>> classes = new HashSet<Class<?>>();
-        JarInputStream jarFile = new JarInputStream(new FileInputStream(jar));
+        @SuppressWarnings("resource")
+		JarInputStream jarFile = new JarInputStream(new FileInputStream(jar));
         JarEntry jarEntry;
         do
         {

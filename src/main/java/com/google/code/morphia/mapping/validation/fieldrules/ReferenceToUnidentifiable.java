@@ -17,9 +17,10 @@ import com.google.code.morphia.mapping.validation.ConstraintViolation.Level;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * 
  */
+@SuppressWarnings({"rawtypes"})
 public class ReferenceToUnidentifiable extends FieldConstraint {
 	
-	@SuppressWarnings("unchecked")
+
 	@Override
 	protected void check(MappedClass mc, MappedField mf, Set<ConstraintViolation> ve) {
 		if (mf.hasAnnotation(Reference.class)) {

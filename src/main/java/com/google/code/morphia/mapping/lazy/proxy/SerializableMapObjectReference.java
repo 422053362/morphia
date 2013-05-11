@@ -15,7 +15,7 @@ import com.google.code.morphia.mapping.lazy.DatastoreProvider;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * 
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class SerializableMapObjectReference extends AbstractReference implements ProxiedEntityReferenceMap {
 
 	/**

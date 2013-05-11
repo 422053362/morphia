@@ -490,7 +490,6 @@ public class QueryImpl<T> extends CriteriaContainerImpl implements Query<T>, Cri
 		return new FieldEndImpl<CriteriaContainerImpl>(this, field, container, validate);
 	}
 
-	//TODO: test this.
 	public Query<T> hintIndex(String idxName) {
 		indexHint = idxName;
 		return this;
@@ -535,11 +534,13 @@ public class QueryImpl<T> extends CriteriaContainerImpl implements Query<T>, Cri
 		return this;
 	}
 
+	@SuppressWarnings("deprecation")
 	public Query<T> queryNonPrimary() {
 		readPref = ReadPreference.SECONDARY;
 		return this;
 	}
 
+	@SuppressWarnings("deprecation")
 	public Query<T> queryPrimaryOnly() {
 		readPref = ReadPreference.PRIMARY;
 		return this;

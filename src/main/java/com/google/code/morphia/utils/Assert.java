@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.EnumSet;
-
+@SuppressWarnings("rawtypes") 
 public final class Assert {
 	private Assert() {
 		// hide

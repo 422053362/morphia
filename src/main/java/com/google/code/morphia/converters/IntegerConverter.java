@@ -10,7 +10,7 @@ import com.google.code.morphia.mapping.MappingException;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked","rawtypes"})
+@SuppressWarnings({"rawtypes"})
 public class IntegerConverter extends TypeConverter implements SimpleValueConverter {
 	public IntegerConverter() {
 		super(int.class, Integer.class);

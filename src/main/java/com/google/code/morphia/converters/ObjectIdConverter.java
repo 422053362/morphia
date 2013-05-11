@@ -12,7 +12,7 @@ import com.google.code.morphia.mapping.MappingException;
  * Convert to an ObjectId from string
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked","rawtypes"})
+@SuppressWarnings({"rawtypes"})
 public class ObjectIdConverter extends TypeConverter implements SimpleValueConverter{
 	
 	public ObjectIdConverter() { super(ObjectId.class); };

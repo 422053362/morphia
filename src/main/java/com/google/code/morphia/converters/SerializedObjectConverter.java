@@ -15,8 +15,9 @@ import com.google.code.morphia.mapping.Serializer;
 /**
  * @author Uwe Schaefer, (us@thomas-daily.de)
  */
-@SuppressWarnings("unchecked")
+@SuppressWarnings("rawtypes")
 public class SerializedObjectConverter extends TypeConverter {
+	
 	@Override
 	protected boolean isSupported(Class c, MappedField optionalExtraInfo) {
 		if (optionalExtraInfo != null)

@@ -26,6 +26,7 @@ import java.util.Map;
   * @author <a href="mailto:mas@apache.org">Michael A. Smith</a>
   */
   
+@SuppressWarnings("rawtypes")
 public class DefaultMapEntry implements Map.Entry {
     
     private Object key;

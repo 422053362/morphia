@@ -24,7 +24,7 @@ import com.mongodb.DBObject;
  * @author Uwe Schaefer, (us@thomas-daily.de)
  * @author scotthernandez
  */
-@SuppressWarnings({"unchecked","rawtypes"})
+@SuppressWarnings({"rawtypes"})
 public class DefaultConverters {
 	private static final Logr log = MorphiaLoggerFactory.get(DefaultConverters.class);
 	

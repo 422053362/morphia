@@ -6,7 +6,7 @@ package com.google.code.morphia.mapping.lazy.proxy;
 import com.google.code.morphia.Key;
 import com.google.code.morphia.mapping.lazy.DatastoreProvider;
 
-@SuppressWarnings("unchecked")
+@SuppressWarnings({"unchecked","rawtypes"})
 public class SerializableEntityObjectReference extends AbstractReference implements ProxiedEntityReference {
 	private static final long serialVersionUID = 1L;
 	private final Key key;
