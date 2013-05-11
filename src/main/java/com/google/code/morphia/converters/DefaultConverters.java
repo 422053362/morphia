@@ -49,6 +49,7 @@ public class DefaultConverters {
 		addConverter(new CharacterConverter());
 		addConverter(new ByteConverter());
 		addConverter(new BooleanConverter());
+		addConverter(new BigDecimalConverter());
 		addConverter(new DoubleConverter());
 		addConverter(new FloatConverter());
 		addConverter(new LongConverter());
