@@ -25,9 +25,8 @@ public class BigDecimalConverter extends TypeConverter implements
 			return null;
 		}
 	}
-
-	public Object decode(Class targetClass, Object fromDBObject,
-			MappedField optionalExtraInfo) throws MappingException {
+	@Override
+	public Object decode(Class targetClass, Object fromDBObject, MappedField optionalExtraInfo) throws MappingException {
 		if (fromDBObject == null)
 			return null;
 		return new BigDecimal(fromDBObject.toString());
