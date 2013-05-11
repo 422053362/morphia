@@ -48,4 +48,5 @@ public class DateConverter extends TypeConverter implements
 	protected boolean isSupported(Class<?> c, MappedField optionalExtraInfo) {
 		return Date.class.isAssignableFrom(c);
 	}
+	
 }
