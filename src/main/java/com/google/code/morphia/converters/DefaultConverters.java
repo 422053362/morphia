@@ -38,7 +38,7 @@ public class DefaultConverters {
 		// some converters are commented out since the pass-through converter is enabled, at the end of the list.
 		// Re-enable them if that changes.
 //		addConverter(new PassthroughConverter(DBRef.class));
-
+		addConverter(new BigDecimalConverter());
 		//Pass-through DBObject or else the MapOfValuesConverter will process it.
 		addConverter(new PassthroughConverter(DBObject.class, BasicDBObject.class));
 		//Pass-through byte[] for the driver to handle
@@ -49,7 +49,7 @@ public class DefaultConverters {
 		addConverter(new CharacterConverter());
 		addConverter(new ByteConverter());
 		addConverter(new BooleanConverter());
-		addConverter(new BigDecimalConverter());
+		
 		addConverter(new DoubleConverter());
 		addConverter(new FloatConverter());
 		addConverter(new LongConverter());
