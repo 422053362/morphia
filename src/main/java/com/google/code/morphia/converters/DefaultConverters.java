@@ -50,6 +50,7 @@ public class DefaultConverters {
 		addConverter(new ByteConverter());
 		addConverter(new BooleanConverter());
 		addConverter(new BigDecimalConverter());
+		addConverter(new NumberConverter());
 		addConverter(new DoubleConverter());
 		addConverter(new FloatConverter());
 		addConverter(new LongConverter());
